@@ -125,6 +125,7 @@ int main(int argc, char **argv)
 
     // Получаем прямой доступ ко входам перцептрона.
     float *const ins = c_perceptron_get_ins(loaded_perceptron);
+    // Если не удалось получить прямой доступ ко входам перцептрона, покажем код ошибки.
     if (ins == NULL)
     {
         c_perceptron_delete(loaded_perceptron);
@@ -137,6 +138,7 @@ int main(int argc, char **argv)
 
     // Получаем прямой доступ к выходам перцептрона.
     const float *const outs = c_perceptron_get_outs(loaded_perceptron);
+    // Если не удалось получить прямой доступ к выходам перцептрона, покажем код ошибки.
     if (outs == NULL)
     {
         c_perceptron_delete(loaded_perceptron);
